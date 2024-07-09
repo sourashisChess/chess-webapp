@@ -33,7 +33,7 @@ public class UCI {
     private static final String STOCKFISH = "src/main/resources/static/engines/stockfish/stockfish";
 
     //bluebetafish_64bit_linux
-    private static final String BLUEBETAFISH = "src/main/resources/static/engines/bluebetafish/bluebetafish_64bit_linux";
+    private static final String BLUEBETAFISH = "/engines/bluebetafish/bluebetafish_64bit_linux";
 
 
     private static final String LC0 = "lc0";
