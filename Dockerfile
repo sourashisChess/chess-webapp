@@ -4,5 +4,7 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/chess-webapp-0.0.1-SNAPSHOT.jar chess-webapp.jar
+COPY --from=build /src/main/resources/static/engines/bluebetafish/bluebetafish_64bit_linux /engines/bluebetafish/bluebetafish_64bit_linux
+RUN chmod +x /engines/bluebetafish/bluebetafish_64bit_linux
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","chess-webapp.jar"]
